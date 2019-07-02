@@ -342,7 +342,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  596字
+                  1.8k字
                 </span>
               
 
@@ -358,7 +358,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  2分钟
+                  7分钟
                 </span>
               
             </div>
@@ -380,10 +380,22 @@
 
       
         
-          <h2 id="http"><a href="#http" class="headerlink" title="http"></a>http</h2><p>下面是搭建简单的web服务器例子，有2个版本，一个是统一返回简单的响应结果，一个是根据不同的路径返回不同的响应结果。</p>
+          <h2 id="http"><a href="#http" class="headerlink" title="http"></a>http</h2><p>下面是搭建简单的web服务器例子，共有4个版本。</p>
 <h3 id="简单的web服务器（版本一）"><a href="#简单的web服务器（版本一）" class="headerlink" title="简单的web服务器（版本一）"></a>简单的web服务器（版本一）</h3><p>使用node构建一个简单的web服务器。</p>
+<p>具体步骤如下：</p>
 <p>1、引入http模块</p>
-<p>2、使用http.createServer()来创建一个 Web服务器</p>
+<p>2、使用<code>http.createServer()</code>来创建一个 Web服务器</p>
+<p>3、服务器具体的功能：接收并且返回消息给游览器</p>
+<p>这里包括3个部分：接收消息，处理接收的消息，返回消息</p>
+<ul>
+<li>接收消息–request</li>
+<li>处理接收的消息<ul>
+<li>在server.on()方法里面处理请求并且返回字符串“hello,hahahahah~”</li>
+</ul>
+</li>
+<li>返回消息–response</li>
+</ul>
+<p>4、绑定端口号，启动服务器<br></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/07/01/二、Node搭建简单的web服务器/#more" rel="contents">

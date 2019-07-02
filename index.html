@@ -385,8 +385,22 @@
 简单的web服务器（版本一）使用node构建一个简单的web服务器。
 1、引入http模块
 2、使用http.createServer()来创建一个 Web服务器
-3、服务器
-          ...
+3、服务器具体的功能：接收并且返回消息给游览器
+这里包括3个部分：接收消息，处理接收的消息，返回消息
+
+接收消息–request
+处理接收的消息
+在server.on()方法里面处理请求并且返回字符串“hello,hahahahah~”
+
+
+返回消息–response
+
+4、绑定端口号，启动服务器
+123456789101112131415161718192021222324252627// 1、引入http模块（require('http')：require中的字符串不能随便写）var myHttp = require('http')// 2、使用http.createServer()来创建一个 Web服务器var server = myHttp.createServer()// 3、服务器具体的功能：接收并且返回消息给游览器//    Request 请求对象//        用来获取客户端的一些请求信息，例如请求路径//    Response 响应对象//        用来给客户端发送响应消息server.on('request', function(request, response) &#123;    // 这里请求的地址是任意的，并没有实现对不同的路径返回不同的消息   console.log('收到客户端的请求，请求的路径：' + request.url);   // response.write(): 用来给客户端发送响应数据,且write 可以使用多次，同时必须使用 end 来结束响应，否则客户端会一直等待   // 目前中文会乱码，只能是字符串或者二进制   response.write('hello,hahahahah~');    // 数字、对象、数组必须使用JSON.stringify处理   response.write(JSON.stringify(123));   response.end();&#125;);// 4、绑定端口号，启动服务器var post = 4567;server.listen(post, function() &#123;    console.log("服务器已启动，访问地址为：http://127.0.0.1:4567/")&#125;);
+
+简单的web服务器（版本二）根据不同的路径返回不同的响应结果。此时只需改造server.on()中的处理即可。
+1234567891011121314151617server.on('request', function(request, response) &#123;   console.log('收到客户端的请求，请求的路径：' + request.url);   var url = request.url      // 根据不同的路径返回不同的响应结果   if (url === '/') &#123;truetrueresponse.end("index page")   &#125; else if (url === '/a') &#123;truetrueresponse.end("a page")   &#125; else if (url === '/a/bb') &#123;truetrueresponse.end("/a/bb page")   &#125; else &#123;truetrueresponse.end("404 Not Found")   &#125;   response.end();&#125;);
+          
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/07/01/二、Node搭建简单的web服务器/#more" rel="contents">
@@ -580,8 +594,83 @@ node.js与JavaScript
 node.js可以解析和执行JavaScript代码
 
 JavaScript代码可以被游览器和node解析
-游览器中的Ja
-          ...
+游览器中的JavaScript：
+ECMAScript
+基本的语法：var、if、function、Object、Array
+
+
+BOM
+跳转历史、调整浏览器大小等游览器窗口交互操作
+
+
+DOM
+操作 HTML 的内容
+
+
+
+
+node.js中的JavaScript
+没有BOM和DOM，只有ECMAScript
+为JavaScript提供了服务器级别的API
+文件读写
+网络通信
+http服务等
+
+
+
+
+
+
+node.js是由事件驱动
+
+非阻塞IO模型，即异步请求
+
+
+npm
+npm是个第三方包仓库，类似于maven
+通过类似下面命令加入：npm install jquery
+
+node.js可以做什么
+Web服务器后台，类似于Java、PHP、Python等开发的后台
+开发命令行工具
+hexo
+npm     
+webpack
+
+
+
+
+安装Node环境
+安装node.js
+
+下载软件，地址：https://nodejs.org/en/
+
+12LTS：稳定版current：体验版
+一般选择LTS稳定版即可，后续查看文档时，会有2个版本的选项，选择自己下载的版本即可。
+
+安装后，检查是否安装成功：
+
+1234567D:\application$ node -vv8.11.1D:\application$ npm -v5.6.0
+
+hello world在node.js中执行js文件
+
+创建JavaScript脚本（helloworld.js）
+
+12var msg = "hello world";console.info(msg);
+
+在命令行运行脚本
+
+1node helloworld.js
+
+运行结果
+
+
+
+注意
+
+脚本不能以node.js命名
+
+          
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/07/01/一、Nodejs初步认识/#more" rel="contents">
@@ -768,7 +857,14 @@ JavaScript代码可以被游览器和node解析
         
           
           Maven的目录结构Maven的目录结构示意图下面是Maven的目录结构
-123456789101112131415161718192021222324Maven│  LICENSE│  NOTICE│  README.txt│  ├─bin│      m2.conf│      mvn│    
+123456789101112131415161718192021222324Maven│  LICENSE│  NOTICE│  README.txt│  ├─bin│      m2.conf│      mvn│      mvn.cmd│      mvnDebug│      mvnDebug.cmd│      mvnyjp│      ├─boot│      plexus-classworlds-2.5.2.jar│      ├─conf│  │  settings.xml│  │  toolchains.xml│  │  │  └─logging│          simplelogger.properties│          └─lib（依赖包，未展示）
+目录结构说明bin命令mvn运行的脚本及一些配置，其中可以看到，设置.m2地址。这里是缺少了一个“.”，不是/.m2，而是m2。1set maven.home default $&#123;user.home&#125;/m2
+boot类加载器框架文件plexus-classworlds-2.5.2.jar。Maven用该框架加载自己的类库。
+conf（相关链接：1、Maven的安装和配置）该目录为全局配置目录。需要将其配置到.m2文件下，使其为用户配置。复制该目录下的settings.xml文件到C:\Users\用户名.m2\下，也就是 ${user.home}/m2下。
+libMaven运行时所需要的依赖包。可以看到都是一些jar包，说明Maven是使用Java开发的。同时需要特别注意maven-model-builder-x.x.x.jar这个文件，x.x.x为版本号，不同版本，其版本号不同。打开该文件，能找到超级POM：\org\apache\maven\model\pom-4.0.0.xml。它是所有Maven POM的父POM，所有的Maven项目继承该配置。
+超级POM主要定义了项目的结构。比如，编译好的文件放在target目录下，源码放在src/main/java目录下，测试放在/src/test/java目录下，资源放在src/main/resources目录下等。这里主要体现了Maven的核心思想，约定优于配置(Convention Over Configuration)。即，Maven有其自己默认的一套约定，需要大家都遵守，除非必要，就不要去修改那些约定内容，也就是不随意修改配置的内容。比如刚刚说的定义了项目的结构，大家都按照这个目录结构来，构建项目的时候，Maven就可以统一处理，大家也可以不用再去配置目录结构，只用直接运行命令就可以了构建项目了，十分省时省事。
+
+超级POM定义了项目的目录结构在超级POM中，定义了下面的目录结构：12345678910111213141516171819&lt;build&gt;    &lt;directory&gt;$&#123;project.basedir&#125;/target&lt;/directory&gt;             &lt;outputDirectory&gt;$&#123;project.build.directory&#125;/classes&lt;/outputDirectory&gt;    &lt;finalName&gt;$&#123;project.artifactId&#125;-$&#123;project.version&#125;&lt;/finalName&gt;    &lt;testOutputDirectory&gt;$&#123;project.build.directory&#125;/test-classes&lt;/testOutputDirectory&gt;    &lt;sourceDirectory&gt;$&#123;project.basedir&#125;/src/main/java&lt;/sourceDirectory&gt;    &lt;scriptSourceDirectory&gt;$&#123;project.basedir&#125;/src/main/scripts&lt;/scriptSourceDirectory&gt;    &lt;testSourceDirectory&gt;$&#123;project.basedir&#125;/src/test/java&lt;/testSourceDirectory&gt;    &lt;resources&gt;      &lt;resource&gt;  
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -961,8 +1057,22 @@ JavaScript代码可以被游览器和node解析
 
 解压Maven到本地指定目录1比如将其解压到:D:\Applications\apache-maven-3.3.3
 
-配置Maven的环
-          ...
+配置Maven的环境变量123新建系统变量：      MAVEN_HOME:D:\Applications\apache-maven-3.3.3\bin编辑环境变量Path，追加%MAVEN_HOME%
+
+
+重新打开cmd窗口检查配置
+配置文件开始是没有settings.xml文件的，需要自己手动将settings.xml文件复制到.m2文件下。
+12345运行命令mvn help:system，用以生成.m2文件夹全局配置文件地址：    D:\Applications\apache-maven-3.3.3\conf\settings.xml设置用户配置：    复制该文件到C:\Users\用户名\.m2\下
+此时可以看到有下面2个文件。
+
+升级123下载升级后的Maven解压到指定目录更新环境变量中MAVEN_HOME的指向目录
+一些说明为什么要检查JDK是否安装Maven是使用Java开发的，所以其也是跨平台的。
+为什么要配置环境变量方便执行命令。若不配置环境变量，则每次执行命令，我们都需要先cd到具体的目录下，然后在运行文件脚本。但是配置了环境变量，则可在任意位置，都可以执行命令。因为已经将其命令目录配置到了系统中，每次运行命令时，系统都可以自己找到目录，去执行具体目录下的命令。
+为什么要重新打开cmd窗口检查配置因为旧的窗口没有获取到最新的命令目录位置，所以需要重新打开cmd窗口，重新加载环境变量参数。
+运行命令mvn help:system有2个目的。其一。用以生成.m2文件夹。其二，生成.m2\repository文件夹，并下载一些jar包到中央仓库。repository文件夹为仓库目录，用来存放下载的jar包和pom文件。
+settings.xml配置文件读取优先级先读本地用户.m2下的配置文件，若没有找到，则再去找conf/目录下的全局配置文件。
+
+          
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/02/18/一、Maven的安装和配置/#more" rel="contents">

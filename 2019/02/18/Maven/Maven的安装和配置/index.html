@@ -85,17 +85,25 @@
 
 
 
-<meta name="description" content="文件读写因为读写文件是比较常用的操作，所以单独把这个拿出来写。 读文件123456789101112131415161718192021222324// 引入 fs 核心模块（file-system 的简写）// require(&apos;fs&apos;)：require中的字符串不能随便写// var fs：变量名可以随便取var fs = require(&apos;fs&apos;);// 读取文件方法// 第一个参数：要读取">
+<meta name="description" content="Maven的安装和配置检查JDK是否安装1java -version  下载下载地址：https://maven.apache.org/download.cgi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二、简单的node示例--文件读写">
-<meta property="og:url" content="https://lilysnian.github.io/2019/07/03/二、简单的node示例-文件读写/index.html">
+<meta property="og:title" content="Maven的安装和配置">
+<meta property="og:url" content="https://lilysnian.github.io/2019/02/18/Maven/Maven的安装和配置/index.html">
 <meta property="og:site_name" content="Raccoon的博客">
-<meta property="og:description" content="文件读写因为读写文件是比较常用的操作，所以单独把这个拿出来写。 读文件123456789101112131415161718192021222324// 引入 fs 核心模块（file-system 的简写）// require(&apos;fs&apos;)：require中的字符串不能随便写// var fs：变量名可以随便取var fs = require(&apos;fs&apos;);// 读取文件方法// 第一个参数：要读取">
+<meta property="og:description" content="Maven的安装和配置检查JDK是否安装1java -version  下载下载地址：https://maven.apache.org/download.cgi">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-03T08:09:46.326Z">
+<meta property="og:image" content="https://lilysnian.github.io/2019/02/18/Maven/Maven的安装和配置/0.png">
+<meta property="og:image" content="https://lilysnian.github.io/2019/02/18/Maven/Maven的安装和配置/1.png">
+<meta property="og:image" content="https://lilysnian.github.io/2019/02/18/Maven/Maven的安装和配置/2.png">
+<meta property="og:image" content="https://lilysnian.github.io/2019/02/18/Maven/Maven的安装和配置/3.png">
+<meta property="og:image" content="https://lilysnian.github.io/2019/02/18/Maven/Maven的安装和配置/4.png">
+<meta property="og:image" content="https://lilysnian.github.io/2019/02/18/Maven/Maven的安装和配置/5.png">
+<meta property="og:image" content="https://lilysnian.github.io/2019/02/18/Maven/Maven的安装和配置/6.png">
+<meta property="og:updated_time" content="2019-07-03T08:54:39.522Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二、简单的node示例--文件读写">
-<meta name="twitter:description" content="文件读写因为读写文件是比较常用的操作，所以单独把这个拿出来写。 读文件123456789101112131415161718192021222324// 引入 fs 核心模块（file-system 的简写）// require(&apos;fs&apos;)：require中的字符串不能随便写// var fs：变量名可以随便取var fs = require(&apos;fs&apos;);// 读取文件方法// 第一个参数：要读取">
+<meta name="twitter:title" content="Maven的安装和配置">
+<meta name="twitter:description" content="Maven的安装和配置检查JDK是否安装1java -version  下载下载地址：https://maven.apache.org/download.cgi">
+<meta name="twitter:image" content="https://lilysnian.github.io/2019/02/18/Maven/Maven的安装和配置/0.png">
 
 
 
@@ -125,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="https://lilysnian.github.io/2019/07/03/二、简单的node示例-文件读写/">
+  <link rel="canonical" href="https://lilysnian.github.io/2019/02/18/Maven/Maven的安装和配置/">
 
 
 
 
 
-  <title>二、简单的node示例--文件读写 | Raccoon的博客</title>
+  <title>Maven的安装和配置 | Raccoon的博客</title>
   
 
 
@@ -258,7 +266,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lilysnian.github.io/2019/07/03/二、简单的node示例-文件读写/">
+    <link itemprop="mainEntityOfPage" href="https://lilysnian.github.io/2019/02/18/Maven/Maven的安装和配置/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Raccoon">
@@ -275,7 +283,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">二、简单的node示例--文件读写</h1>
+          <h1 class="post-title" itemprop="name headline">Maven的安装和配置</h1>
         
 
         <div class="post-meta">
@@ -287,8 +295,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-03T09:38:44+08:00">
-                2019-07-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-18T15:44:19+08:00">
+                2019-02-18
               </time>
             
 
@@ -310,8 +318,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Node/" itemprop="url" rel="index">
-                    <span itemprop="name">Node</span>
+                  <a href="/categories/Maven/" itemprop="url" rel="index">
+                    <span itemprop="name">Maven</span>
                   </a>
                 </span>
 
@@ -343,7 +351,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  398字
+                  534字
                 </span>
               
 
@@ -380,12 +388,27 @@
       
 
       
-        <h2 id="文件读写"><a href="#文件读写" class="headerlink" title="文件读写"></a>文件读写</h2><p>因为读写文件是比较常用的操作，所以单独把这个拿出来写。</p>
-<h3 id="读文件"><a href="#读文件" class="headerlink" title="读文件"></a>读文件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入 fs 核心模块（file-system 的简写）</span></span><br><span class="line"><span class="comment">// require('fs')：require中的字符串不能随便写</span></span><br><span class="line"><span class="comment">// var fs：变量名可以随便取</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 读取文件方法</span></span><br><span class="line"><span class="comment">// 第一个参数：要读取的文件路径</span></span><br><span class="line"><span class="comment">// 第二个参数：回调函数</span></span><br><span class="line"><span class="comment">//		回调函数参数error、data</span></span><br><span class="line">fs.readFile(<span class="string">'./nodejs.md'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">error, data</span>) </span>&#123;</span><br><span class="line">   <span class="comment">// 读取成功时，error = null，data = 读取的数据</span></span><br><span class="line">   <span class="comment">// 读取失败时，error = 错误信息，data = undefined</span></span><br><span class="line">   <span class="built_in">console</span>.info(error) </span><br><span class="line">   <span class="keyword">if</span> (error) &#123;</span><br><span class="line">true  <span class="built_in">console</span>.info(<span class="string">"读取失败"</span>) </span><br><span class="line">      <span class="built_in">console</span>.info(error) </span><br><span class="line">      <span class="built_in">console</span>.info(data)  </span><br><span class="line">   &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">       <span class="comment">// 这里的data是16进制数据，需要toString()方法转为字符</span></span><br><span class="line">       <span class="built_in">console</span>.info(<span class="string">"读取成功"</span>) </span><br><span class="line">       <span class="built_in">console</span>.info(data) </span><br><span class="line">       <span class="built_in">console</span>.info(data.toString())  </span><br><span class="line">   &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+        <h1 id="Maven的安装和配置"><a href="#Maven的安装和配置" class="headerlink" title="Maven的安装和配置"></a>Maven的安装和配置</h1><h2 id="检查JDK是否安装"><a href="#检查JDK是否安装" class="headerlink" title="检查JDK是否安装"></a>检查JDK是否安装</h2><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -<span class="built_in">version</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/18/Maven/Maven的安装和配置/0.png" alt="img"></p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>下载地址：<a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">https://maven.apache.org/download.cgi</a></p>
 <a id="more"></a>
-<h3 id="写文件"><a href="#写文件" class="headerlink" title="写文件"></a>写文件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入 fs 核心模块（file-system 的简写）</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">var</span> msg = <span class="string">"写入的信息"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 写文件方法</span></span><br><span class="line"><span class="comment">// 第一个参数：要写的文件路径</span></span><br><span class="line"><span class="comment">// 第二个参数：写的内容</span></span><br><span class="line"><span class="comment">// 第三个参数：回调函数</span></span><br><span class="line"><span class="comment">//		回调函数参数error（因为这里是写入，所以不需要有data，直接返回异常信息就可以了）</span></span><br><span class="line">fs.writeFile(<span class="string">'./nodejs.md'</span>, msg, <span class="function"><span class="keyword">function</span>(<span class="params">error</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (error) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'写入失败'</span>)</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'写入成功了'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="异常信息"><a href="#异常信息" class="headerlink" title="异常信息"></a>异常信息</h3><p>文件读写错误时，会出现下面的异常信息，比如下面就是写文件时，文件命名不合规导致的错误信息。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">Error</span>: ENOENT: no such file or directory, open <span class="string">'D:\myCode\script\node\nodejs.&gt;&gt;md'</span></span><br><span class="line">  errno: <span class="number">-4058</span>,</span><br><span class="line">  code: <span class="string">'ENOENT'</span>,</span><br><span class="line">  syscall: <span class="string">'open'</span>,</span><br><span class="line">  path: <span class="string">'D:\\myCode\\script\\node\\nodejs.&gt;&gt;md'</span> &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/18/Maven/Maven的安装和配置/1.png" alt="img"></p>
+<h2 id="解压Maven到本地指定目录"><a href="#解压Maven到本地指定目录" class="headerlink" title="解压Maven到本地指定目录"></a>解压Maven到本地指定目录</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">比如将其解压到<span class="selector-pseudo">:D</span>:\<span class="selector-tag">Applications</span>\<span class="selector-tag">apache-maven-3</span><span class="selector-class">.3</span><span class="selector-class">.3</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/18/Maven/Maven的安装和配置/2.png" alt="img"></p>
+<h2 id="配置Maven的环境变量"><a href="#配置Maven的环境变量" class="headerlink" title="配置Maven的环境变量"></a>配置Maven的环境变量</h2><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">新建系统变量：</span><br><span class="line">      MAVEN_HOME:D:<span class="symbol">\A</span>pplications<span class="symbol">\a</span>pache-maven-3.3.3<span class="symbol">\b</span>in</span><br><span class="line">编辑环境变量Path，追加<span class="variable">%MAVEN_HOME%</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/18/Maven/Maven的安装和配置/3.png" alt="img"></p>
+<p><img src="/2019/02/18/Maven/Maven的安装和配置/4.png" alt="img"></p>
+<h2 id="重新打开cmd窗口检查配置"><a href="#重新打开cmd窗口检查配置" class="headerlink" title="重新打开cmd窗口检查配置"></a>重新打开cmd窗口检查配置</h2><p><img src="/2019/02/18/Maven/Maven的安装和配置/5.png" alt="img"></p>
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>开始是没有settings.xml文件的，需要自己手动将settings.xml文件复制到.m2文件下。</p>
+<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">运行命令mvn help:system，用以生成.m2文件夹</span><br><span class="line">全局配置文件地址：</span><br><span class="line">    D:<span class="symbol">\A</span>pplications<span class="symbol">\a</span>pache-maven-3.3.3<span class="symbol">\c</span>onf<span class="symbol">\s</span>ettings.xml</span><br><span class="line">设置用户配置：</span><br><span class="line">    复制该文件到C:<span class="symbol">\U</span>sers<span class="symbol">\用</span>户名<span class="symbol">\.</span>m2<span class="symbol">\下</span></span><br></pre></td></tr></table></figure>
+<p>此时可以看到有下面2个文件。</p>
+<p><img src="/2019/02/18/Maven/Maven的安装和配置/6.png" alt="img"></p>
+<h2 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">下载升级后的Maven</span><br><span class="line">解压到指定目录</span><br><span class="line">更新环境变量中MAVEN_HOME的指向目录</span><br></pre></td></tr></table></figure>
+<h2 id="一些说明"><a href="#一些说明" class="headerlink" title="一些说明"></a>一些说明</h2><h3 id="为什么要检查JDK是否安装"><a href="#为什么要检查JDK是否安装" class="headerlink" title="为什么要检查JDK是否安装"></a>为什么要检查JDK是否安装</h3><p>Maven是使用Java开发的，所以其也是跨平台的。</p>
+<h3 id="为什么要配置环境变量"><a href="#为什么要配置环境变量" class="headerlink" title="为什么要配置环境变量"></a>为什么要配置环境变量</h3><p>方便执行命令。若不配置环境变量，则每次执行命令，我们都需要先cd到具体的目录下，然后在运行文件脚本。但是配置了环境变量，则可在任意位置，都可以执行命令。因为已经将其命令目录配置到了系统中，每次运行命令时，系统都可以自己找到目录，去执行具体目录下的命令。</p>
+<h3 id="为什么要重新打开cmd窗口检查配置"><a href="#为什么要重新打开cmd窗口检查配置" class="headerlink" title="为什么要重新打开cmd窗口检查配置"></a>为什么要重新打开cmd窗口检查配置</h3><p>因为旧的窗口没有获取到最新的命令目录位置，所以需要重新打开cmd窗口，重新加载环境变量参数。</p>
+<h3 id="运行命令mvn-help-system"><a href="#运行命令mvn-help-system" class="headerlink" title="运行命令mvn help:system"></a>运行命令mvn help:system</h3><p>有2个目的。其一。用以生成.m2文件夹。其二，生成.m2\repository文件夹，并下载一些jar包到中央仓库。repository文件夹为仓库目录，用来存放下载的jar包和pom文件。</p>
+<h3 id="settings-xml配置文件读取优先级"><a href="#settings-xml配置文件读取优先级" class="headerlink" title="settings.xml配置文件读取优先级"></a>settings.xml配置文件读取优先级</h3><p>先读本地用户.m2下的配置文件，若没有找到，则再去找conf/目录下的全局配置文件。</p>
 
       
     </div>
@@ -449,15 +472,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/01/三、Node搭建简单的web服务器/" rel="next" title="三、Node搭建简单的web服务器">
-                <i class="fa fa-chevron-left"></i> 三、Node搭建简单的web服务器
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/26/Maven/Maven的目录结构/" rel="prev" title="Maven的目录结构">
+                Maven的目录结构 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -580,7 +603,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件读写"><span class="nav-number">1.</span> <span class="nav-text">文件读写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#读文件"><span class="nav-number">1.1.</span> <span class="nav-text">读文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写文件"><span class="nav-number">1.2.</span> <span class="nav-text">写文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常信息"><span class="nav-number">1.3.</span> <span class="nav-text">异常信息</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven的安装和配置"><span class="nav-number">1.</span> <span class="nav-text">Maven的安装和配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#检查JDK是否安装"><span class="nav-number">1.1.</span> <span class="nav-text">检查JDK是否安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载"><span class="nav-number">1.2.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解压Maven到本地指定目录"><span class="nav-number">1.3.</span> <span class="nav-text">解压Maven到本地指定目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Maven的环境变量"><span class="nav-number">1.4.</span> <span class="nav-text">配置Maven的环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重新打开cmd窗口检查配置"><span class="nav-number">1.5.</span> <span class="nav-text">重新打开cmd窗口检查配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置文件"><span class="nav-number">1.6.</span> <span class="nav-text">配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#升级"><span class="nav-number">1.7.</span> <span class="nav-text">升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些说明"><span class="nav-number">1.8.</span> <span class="nav-text">一些说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要检查JDK是否安装"><span class="nav-number">1.8.1.</span> <span class="nav-text">为什么要检查JDK是否安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要配置环境变量"><span class="nav-number">1.8.2.</span> <span class="nav-text">为什么要配置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要重新打开cmd窗口检查配置"><span class="nav-number">1.8.3.</span> <span class="nav-text">为什么要重新打开cmd窗口检查配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行命令mvn-help-system"><span class="nav-number">1.8.4.</span> <span class="nav-text">运行命令mvn help:system</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#settings-xml配置文件读取优先级"><span class="nav-number">1.8.5.</span> <span class="nav-text">settings.xml配置文件读取优先级</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

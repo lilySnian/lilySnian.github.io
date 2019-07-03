@@ -87,17 +87,17 @@
 
 <meta name="description" content="Maven的目录结构Maven的目录结构示意图下面是Maven的目录结构 123456789101112131415161718192021222324Maven│  LICENSE│  NOTICE│  README.txt│  ├─bin│      m2.conf│      mvn│      mvn.cmd│      mvnDebug│      mvnDebug.cmd│">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二、Maven的目录结构">
-<meta property="og:url" content="https://lilysnian.github.io/2019/02/26/二、Maven的目录结构/index.html">
+<meta property="og:title" content="Maven的目录结构">
+<meta property="og:url" content="https://lilysnian.github.io/2019/02/26/Maven/Maven的目录结构/index.html">
 <meta property="og:site_name" content="Raccoon的博客">
 <meta property="og:description" content="Maven的目录结构Maven的目录结构示意图下面是Maven的目录结构 123456789101112131415161718192021222324Maven│  LICENSE│  NOTICE│  README.txt│  ├─bin│      m2.conf│      mvn│      mvn.cmd│      mvnDebug│      mvnDebug.cmd│">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://lilysnian.github.io/2019/02/26/二、Maven的目录结构/clipboard.png">
-<meta property="og:updated_time" content="2019-07-02T02:31:54.399Z">
+<meta property="og:image" content="https://lilysnian.github.io/2019/02/26/Maven/Maven的目录结构/clipboard.png">
+<meta property="og:updated_time" content="2019-07-03T08:54:24.081Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二、Maven的目录结构">
+<meta name="twitter:title" content="Maven的目录结构">
 <meta name="twitter:description" content="Maven的目录结构Maven的目录结构示意图下面是Maven的目录结构 123456789101112131415161718192021222324Maven│  LICENSE│  NOTICE│  README.txt│  ├─bin│      m2.conf│      mvn│      mvn.cmd│      mvnDebug│      mvnDebug.cmd│">
-<meta name="twitter:image" content="https://lilysnian.github.io/2019/02/26/二、Maven的目录结构/clipboard.png">
+<meta name="twitter:image" content="https://lilysnian.github.io/2019/02/26/Maven/Maven的目录结构/clipboard.png">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://lilysnian.github.io/2019/02/26/二、Maven的目录结构/">
+  <link rel="canonical" href="https://lilysnian.github.io/2019/02/26/Maven/Maven的目录结构/">
 
 
 
 
 
-  <title>二、Maven的目录结构 | Raccoon的博客</title>
+  <title>Maven的目录结构 | Raccoon的博客</title>
   
 
 
@@ -260,7 +260,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lilysnian.github.io/2019/02/26/二、Maven的目录结构/">
+    <link itemprop="mainEntityOfPage" href="https://lilysnian.github.io/2019/02/26/Maven/Maven的目录结构/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Raccoon">
@@ -277,7 +277,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">二、Maven的目录结构</h1>
+          <h1 class="post-title" itemprop="name headline">Maven的目录结构</h1>
         
 
         <div class="post-meta">
@@ -390,7 +390,7 @@
 <h3 id="conf（相关链接：1、Maven的安装和配置）"><a href="#conf（相关链接：1、Maven的安装和配置）" class="headerlink" title="conf（相关链接：1、Maven的安装和配置）"></a>conf（相关链接：1、Maven的安装和配置）</h3><p>该目录为全局配置目录。需要将其配置到.m2文件下，使其为用户配置。复制该目录下的settings.xml文件到C:\Users\用户名.m2\下，也就是 ${user.home}/m2下。</p>
 <h3 id="lib"><a href="#lib" class="headerlink" title="lib"></a>lib</h3><p>Maven运行时所需要的依赖包。可以看到都是一些jar包，说明Maven是使用Java开发的。<br>同时需要特别注意maven-model-builder-x.x.x.jar这个文件，x.x.x为版本号，不同版本，其版本号不同。打开该文件，能找到超级POM：\org\apache\maven\model\pom-4.0.0.xml。它是所有Maven POM的父POM，所有的Maven项目继承该配置。</p>
 <h2 id="超级POM"><a href="#超级POM" class="headerlink" title="超级POM"></a>超级POM</h2><p>主要定义了项目的结构。比如，编译好的文件放在target目录下，源码放在src/main/java目录下，测试放在/src/test/java目录下，资源放在src/main/resources目录下等。<br>这里主要体现了Maven的核心思想，约定优于配置(Convention Over Configuration)。即，Maven有其自己默认的一套约定，需要大家都遵守，除非必要，就不要去修改那些约定内容，也就是不随意修改配置的内容。比如刚刚说的定义了项目的结构，大家都按照这个目录结构来，构建项目的时候，Maven就可以统一处理，大家也可以不用再去配置目录结构，只用直接运行命令就可以了构建项目了，十分省时省事。</p>
-<p><img src="/2019/02/26/二、Maven的目录结构/clipboard.png" alt="img"></p>
+<p><img src="/2019/02/26/Maven/Maven的目录结构/clipboard.png" alt="img"></p>
 <h3 id="超级POM定义了项目的目录结构"><a href="#超级POM定义了项目的目录结构" class="headerlink" title="超级POM定义了项目的目录结构"></a>超级POM定义了项目的目录结构</h3><p>在超级POM中，定义了下面的目录结构：<br><figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">directory</span>&gt;</span>$</span><span class="template-variable">&#123;project.basedir&#125;</span><span class="xml">/target<span class="tag">&lt;/<span class="name">directory</span>&gt;</span>         </span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">outputDirectory</span>&gt;</span>$</span><span class="template-variable">&#123;project.build.directory&#125;</span><span class="xml">/classes<span class="tag">&lt;/<span class="name">outputDirectory</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">finalName</span>&gt;</span>$</span><span class="template-variable">&#123;project.artifactId&#125;</span><span class="xml">-$</span><span class="template-variable">&#123;project.version&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">finalName</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">testOutputDirectory</span>&gt;</span>$</span><span class="template-variable">&#123;project.build.directory&#125;</span><span class="xml">/test-classes<span class="tag">&lt;/<span class="name">testOutputDirectory</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">sourceDirectory</span>&gt;</span>$</span><span class="template-variable">&#123;project.basedir&#125;</span><span class="xml">/src/main/java<span class="tag">&lt;/<span class="name">sourceDirectory</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">scriptSourceDirectory</span>&gt;</span>$</span><span class="template-variable">&#123;project.basedir&#125;</span><span class="xml">/src/main/scripts<span class="tag">&lt;/<span class="name">scriptSourceDirectory</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">testSourceDirectory</span>&gt;</span>$</span><span class="template-variable">&#123;project.basedir&#125;</span><span class="xml">/src/test/java<span class="tag">&lt;/<span class="name">testSourceDirectory</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">resources</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">directory</span>&gt;</span>$</span><span class="template-variable">&#123;project.basedir&#125;</span><span class="xml">/src/main/resources<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">testResources</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">testResource</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">directory</span>&gt;</span>$</span><span class="template-variable">&#123;project.basedir&#125;</span><span class="xml">/src/test/resources<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">testResource</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">testResources</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
 <h3 id="实际项目的目录结构"><a href="#实际项目的目录结构" class="headerlink" title="实际项目的目录结构"></a>实际项目的目录结构</h3><p>实际在项目中，下面则是对应的实际目录结构：<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/项目目录</span><br><span class="line">├─pom.xml 用于maven的配置文件</span><br><span class="line">├─/src 源代码目录</span><br><span class="line">│	├─/main 工程源代码目录</span><br><span class="line">│	│	└─/java 工程java源代码目录</span><br><span class="line">│	│	└─<span class="built_in">/resource </span>工程的资源目录</span><br><span class="line">│	└─/test 单元测试目录</span><br><span class="line">│		└─/java</span><br><span class="line">│		└─<span class="built_in">/resource </span>工程的资源目录</span><br><span class="line">└─/target 输出目录，所有的输出物都存放在这个目录下</span><br><span class="line">true└─/classes 编译之后的class文件</span><br></pre></td></tr></table></figure></p>
 
@@ -456,8 +456,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/18/一、Maven的安装和配置/" rel="next" title="一、Maven的安装和配置">
-                <i class="fa fa-chevron-left"></i> 一、Maven的安装和配置
+              <a href="/2019/02/18/Maven/Maven的安装和配置/" rel="next" title="Maven的安装和配置">
+                <i class="fa fa-chevron-left"></i> Maven的安装和配置
               </a>
             
           </div>
@@ -466,8 +466,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/01/一、Nodejs初步认识/" rel="prev" title="一、Nodejs初步认识">
-                一、Nodejs初步认识 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/01/Node/Nodejs初步认识/" rel="prev" title="Nodejs初步认识">
+                Nodejs初步认识 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

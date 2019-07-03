@@ -255,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lilysnian.github.io/2019/07/01/二、Node搭建简单的web服务器/">
+    <link itemprop="mainEntityOfPage" href="https://lilysnian.github.io/2019/07/03/二、简单的node示例-文件读写/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Raccoon">
@@ -274,7 +274,195 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/07/01/二、Node搭建简单的web服务器/" itemprop="url">二、Node搭建简单的web服务器</a></h1>
+                <a class="post-title-link" href="/2019/07/03/二、简单的node示例-文件读写/" itemprop="url">二、简单的node示例--文件读写</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-03T09:38:44+08:00">
+                2019-07-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Node/" itemprop="url" rel="index">
+                    <span itemprop="name">Node</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+			
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  398字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  1分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          文件读写因为读写文件是比较常用的操作，所以单独把这个拿出来写。
+读文件123456789101112131415161718192021222324// 引入 fs 核心模块（file-system 的简写）// require('fs')：require中的字符串不能随便写// var fs：变量
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/03/二、简单的node示例-文件读写/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+	<!--配置文章结束模板-->
+	<div>
+      
+    </div>
+	<!--配置文章结束模板-->
+	
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lilysnian.github.io/2019/07/01/三、Node搭建简单的web服务器/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Raccoon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Raccoon的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/01/三、Node搭建简单的web服务器/" itemprop="url">三、Node搭建简单的web服务器</a></h1>
         
 
         <div class="post-meta">
@@ -385,7 +573,7 @@
 <p>具体步骤如下：</p>
 <p>1、引入http模块</p>
 <p>2、使用<code>http.createServer()</code>来创建一个 Web服务器</p>
-<p>3、服务器具体的功能：接收并且返回消息给游览器</p>
+<p>3、服务器具体的功能：接收并且返回消息给浏览器</p>
 <p>这里包括3个部分：接收消息，处理接收的消息，返回消息</p>
 <ul>
 <li>接收消息–request</li>
@@ -398,7 +586,7 @@
 <p>4、绑定端口号，启动服务器<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/07/01/二、Node搭建简单的web服务器/#more" rel="contents">
+            <a class="btn" href="/2019/07/01/三、Node搭建简单的web服务器/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1073,7 +1261,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

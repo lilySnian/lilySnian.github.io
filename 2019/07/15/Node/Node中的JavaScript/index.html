@@ -85,21 +85,22 @@
 
 
 
-<meta name="description" content="什么是node.jsnode.js说明 node.js是一个运行时环境，类似于java的jre 基于Chrome’s V8游览器引擎解析  node.js与JavaScript node.js可以解析和执行JavaScript代码 JavaScript代码可以被游览器和node解析 游览器中的JavaScript： ECMAScript 基本的语法：var、if、function、Object、A">
+<meta name="description" content="Node 中的 JavaScript核心模块node提供了一些服务器级别的API可供使用。具体查看核心模块文档如下： 访问https://nodejs.org，然后按照下面这个路径点击，就可以看到模块的文档。   关键字require使用关键字require方法来加载相关的模块，类似于java中的import，但是import可以加载一个类，而require是加载一个模块。 加载node内置的核心">
 <meta name="keywords" content="Node">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nodejs初步认识">
-<meta property="og:url" content="https://lilysnian.github.io/2019/07/01/Node/Nodejs初步认识/index.html">
+<meta property="og:title" content="Node中的JavaScript">
+<meta property="og:url" content="https://lilysnian.github.io/2019/07/15/Node/Node中的JavaScript/index.html">
 <meta property="og:site_name" content="Raccoon的博客">
-<meta property="og:description" content="什么是node.jsnode.js说明 node.js是一个运行时环境，类似于java的jre 基于Chrome’s V8游览器引擎解析  node.js与JavaScript node.js可以解析和执行JavaScript代码 JavaScript代码可以被游览器和node解析 游览器中的JavaScript： ECMAScript 基本的语法：var、if、function、Object、A">
+<meta property="og:description" content="Node 中的 JavaScript核心模块node提供了一些服务器级别的API可供使用。具体查看核心模块文档如下： 访问https://nodejs.org，然后按照下面这个路径点击，就可以看到模块的文档。   关键字require使用关键字require方法来加载相关的模块，类似于java中的import，但是import可以加载一个类，而require是加载一个模块。 加载node内置的核心">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://lilysnian.github.io/2019/07/01/Node/Nodejs初步认识/clipboard.png">
-<meta property="og:image" content="https://lilysnian.github.io/2019/07/01/Node/Nodejs初步认识/1561694358177.png">
-<meta property="og:updated_time" content="2019-07-08T01:49:26.865Z">
+<meta property="og:image" content="https://lilysnian.github.io/2019/07/15/Node/Node中的JavaScript/1561952056272.png">
+<meta property="og:image" content="https://lilysnian.github.io/2019/07/15/Node/Node中的JavaScript/1561952166673.png">
+<meta property="og:image" content="https://lilysnian.github.io/2019/07/15/Node/Node中的JavaScript/1562049679452.png">
+<meta property="og:updated_time" content="2019-07-15T06:35:31.660Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nodejs初步认识">
-<meta name="twitter:description" content="什么是node.jsnode.js说明 node.js是一个运行时环境，类似于java的jre 基于Chrome’s V8游览器引擎解析  node.js与JavaScript node.js可以解析和执行JavaScript代码 JavaScript代码可以被游览器和node解析 游览器中的JavaScript： ECMAScript 基本的语法：var、if、function、Object、A">
-<meta name="twitter:image" content="https://lilysnian.github.io/2019/07/01/Node/Nodejs初步认识/clipboard.png">
+<meta name="twitter:title" content="Node中的JavaScript">
+<meta name="twitter:description" content="Node 中的 JavaScript核心模块node提供了一些服务器级别的API可供使用。具体查看核心模块文档如下： 访问https://nodejs.org，然后按照下面这个路径点击，就可以看到模块的文档。   关键字require使用关键字require方法来加载相关的模块，类似于java中的import，但是import可以加载一个类，而require是加载一个模块。 加载node内置的核心">
+<meta name="twitter:image" content="https://lilysnian.github.io/2019/07/15/Node/Node中的JavaScript/1561952056272.png">
 
 
 
@@ -129,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="https://lilysnian.github.io/2019/07/01/Node/Nodejs初步认识/">
+  <link rel="canonical" href="https://lilysnian.github.io/2019/07/15/Node/Node中的JavaScript/">
 
 
 
 
 
-  <title>Nodejs初步认识 | Raccoon的博客</title>
+  <title>Node中的JavaScript | Raccoon的博客</title>
   
 
 
@@ -272,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lilysnian.github.io/2019/07/01/Node/Nodejs初步认识/">
+    <link itemprop="mainEntityOfPage" href="https://lilysnian.github.io/2019/07/15/Node/Node中的JavaScript/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Raccoon">
@@ -289,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Nodejs初步认识</h1>
+          <h1 class="post-title" itemprop="name headline">Node中的JavaScript</h1>
         
 
         <div class="post-meta">
@@ -301,8 +302,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-01T15:00:11+08:00">
-                2019-07-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-15T14:33:26+08:00">
+                2019-07-15
               </time>
             
 
@@ -357,7 +358,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  357字
+                  490字
                 </span>
               
 
@@ -394,86 +395,30 @@
       
 
       
-        <h2 id="什么是node-js"><a href="#什么是node-js" class="headerlink" title="什么是node.js"></a>什么是node.js</h2><h3 id="node-js说明"><a href="#node-js说明" class="headerlink" title="node.js说明"></a>node.js说明</h3><ul>
-<li>node.js是一个运行时环境，类似于java的jre</li>
-<li>基于Chrome’s V8游览器引擎解析</li>
-</ul>
-<h3 id="node-js与JavaScript"><a href="#node-js与JavaScript" class="headerlink" title="node.js与JavaScript"></a>node.js与JavaScript</h3><ul>
-<li>node.js可以解析和执行JavaScript代码<ul>
-<li>JavaScript代码可以被游览器和node解析</li>
-<li>游览器中的JavaScript：<ul>
-<li>ECMAScript<ul>
-<li>基本的语法：var、if、function、Object、Array</li>
-</ul>
-</li>
-<li>BOM<ul>
-<li>跳转历史、调整浏览器大小等游览器窗口交互操作</li>
-</ul>
-</li>
-<li>DOM<ul>
-<li>操作 HTML 的内容</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>node.js中的JavaScript<ul>
-<li>没有BOM和DOM，只有ECMAScript</li>
-<li>为JavaScript提供了服务器级别的API<ul>
-<li>文件读写</li>
-<li>网络通信</li>
-<li>http服务等<a id="more"></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>node.js是由事件驱动</li>
-<li>非阻塞IO模型，即异步请求</li>
-</ul>
-<h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><ul>
-<li>npm是个第三方包仓库，类似于maven</li>
-<li>通过类似下面命令加入：npm install jquery</li>
-</ul>
-<h2 id="node-js可以做什么"><a href="#node-js可以做什么" class="headerlink" title="node.js可以做什么"></a>node.js可以做什么</h2><ul>
-<li>Web服务器后台，类似于Java、PHP、Python等开发的后台</li>
-<li>开发命令行工具<ul>
-<li>hexo</li>
-<li>npm     </li>
-<li>webpack</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="安装Node环境"><a href="#安装Node环境" class="headerlink" title="安装Node环境"></a>安装Node环境</h2><ul>
-<li>安装node.js</li>
-</ul>
-<p>下载软件，地址：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></p>
-<p><img src="/2019/07/01/Node/Nodejs初步认识/clipboard.png" alt="img"></p>
-<figure class="highlight nsis"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LTS：稳定版</span><br><span class="line"><span class="literal">current</span>：体验版</span><br></pre></td></tr></table></figure>
-<p>一般选择LTS稳定版即可，后续查看文档时，会有2个版本的选项，选择自己下载的版本即可。</p>
+        <h2 id="Node-中的-JavaScript"><a href="#Node-中的-JavaScript" class="headerlink" title="Node 中的 JavaScript"></a>Node 中的 JavaScript</h2><h3 id="核心模块"><a href="#核心模块" class="headerlink" title="核心模块"></a>核心模块</h3><p>node提供了一些服务器级别的API可供使用。具体查看核心模块文档如下：</p>
+<p>访问<a href="https://nodejs.org/" target="_blank" rel="noopener">https://nodejs.org</a>，然后按照下面这个路径点击，就可以看到模块的文档。</p>
+<p><img src="/2019/07/15/Node/Node中的JavaScript/1561952056272.png" alt="img"></p>
+<p><img src="/2019/07/15/Node/Node中的JavaScript/1561952166673.png" alt="img"></p>
+<h3 id="关键字require"><a href="#关键字require" class="headerlink" title="关键字require"></a>关键字require</h3><p>使用关键字<code>require</code>方法来加载相关的模块，类似于java中的<code>import</code>，但是<code>import</code>可以加载一个类，而<code>require</code>是加载一个模块。</p>
+<h5 id="加载node内置的核心模块："><a href="#加载node内置的核心模块：" class="headerlink" title="加载node内置的核心模块："></a>加载node内置的核心模块：</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"><span class="keyword">const</span> os = <span class="built_in">require</span>(<span class="string">'os'</span>);</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">const</span> stream = <span class="built_in">require</span>(<span class="string">'stream'</span>);</span><br></pre></td></tr></table></figure>
+<h5 id="加载自定义模块"><a href="#加载自定义模块" class="headerlink" title="加载自定义模块"></a>加载自定义模块</h5><p>使用<code>require</code>可以加载自定义模块，方法中写相对路径，其路径规则如下：</p>
 <ul>
-<li>安装后，检查是否安装成功：</li>
+<li>相对路径必须加 ./，否则报错</li>
+<li>可以省略后缀名js</li>
+<li>例子如下，在a.js中引入b.js</li>
 </ul>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">D:\application</span><br><span class="line">$ <span class="keyword">node</span> <span class="title">-v</span></span><br><span class="line">v8.<span class="number">11.1</span></span><br><span class="line"></span><br><span class="line">D:\application</span><br><span class="line">$ npm -v</span><br><span class="line"><span class="number">5.6</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h2><p>在node.js中执行js文件</p>
-<ul>
-<li>创建JavaScript脚本（helloworld.js）</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> msg = <span class="string">"hello world"</span>;</span><br><span class="line"><span class="built_in">console</span>.info(msg);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>在命令行运行脚本</li>
-</ul>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">node</span> <span class="title">helloworld</span>.js</span><br></pre></td></tr></table></figure>
-<ul>
-<li>运行结果</li>
-</ul>
-<p><img src="/2019/07/01/Node/Nodejs初步认识/1561694358177.png" alt="img"></p>
-<ul>
-<li>注意</li>
-</ul>
-<p>脚本不能以node.js命名</p>
+<p>a.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'hi, this is a!'</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 可以省略后缀名js</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">'./b'</span>);</span><br><span class="line"><span class="comment">//require('./b.js');</span></span><br></pre></td></tr></table></figure>
+<p>b.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> b = <span class="string">'hi, this is b!'</span></span><br><span class="line"><span class="built_in">console</span>.log(b)</span><br></pre></td></tr></table></figure>
+<h3 id="模块通信"><a href="#模块通信" class="headerlink" title="模块通信"></a>模块通信</h3><p>在 Node 中，模块完全是封闭的，模块中的变量和方法只能供模块自己使用，外部不能访问模块中的变量和方法，模块内也不能访问模块外的变量和方法。所以是模块作用域，没有全局作用域。</p>
+<h3 id="关键字exports"><a href="#关键字exports" class="headerlink" title="关键字exports"></a>关键字exports</h3><p>为了能让外部访问模块内的方法和变量，需要使用<code>exports</code>手动导出。在每个模块中，都提供了一个对象：<code>exports</code>，exports导出的对象默认是个空对象，将需要暴露出来的成员手动的挂载到 <code>exports</code> 接口对象中。然后使用<code>require</code> 来引入导出模块，再提供“.”的方式导出 <code>exports</code> 接口中的对象。</p>
+<p>a.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> b = <span class="built_in">require</span>(<span class="string">'./b.js'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(b)</span><br><span class="line">b.print(<span class="string">'b.print'</span>)</span><br></pre></td></tr></table></figure>
+<p>b.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> b = <span class="string">'hi, this is b!'</span></span><br><span class="line"><span class="built_in">console</span>.log(b)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 暴露变量</span></span><br><span class="line">exports.b = b</span><br><span class="line"><span class="comment">// 暴露方法</span></span><br><span class="line">exports.print = <span class="function"><span class="keyword">function</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">true<span class="built_in">console</span>.log(<span class="string">"print:"</span>,str)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>导出的b，是一个键值对，里面包含变量b及其值、方法print()。</p>
+<p><img src="/2019/07/15/Node/Node中的JavaScript/1562049679452.png" alt="img"></p>
 
       
     </div>
@@ -543,8 +488,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/26/Maven/Maven的目录结构/" rel="next" title="Maven的目录结构">
-                <i class="fa fa-chevron-left"></i> Maven的目录结构
+              <a href="/2019/07/08/其他/如何让谷歌收录自己的网站/" rel="next" title="如何让谷歌收录自己的网站">
+                <i class="fa fa-chevron-left"></i> 如何让谷歌收录自己的网站
               </a>
             
           </div>
@@ -552,10 +497,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/02/Node/简单的node示例-文件读写/" rel="prev" title="简单的node示例--文件读写">
-                简单的node示例--文件读写 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -687,7 +628,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是node-js"><span class="nav-number">1.</span> <span class="nav-text">什么是node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#node-js说明"><span class="nav-number">1.1.</span> <span class="nav-text">node.js说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#node-js与JavaScript"><span class="nav-number">1.2.</span> <span class="nav-text">node.js与JavaScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#npm"><span class="nav-number">1.3.</span> <span class="nav-text">npm</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#node-js可以做什么"><span class="nav-number">2.</span> <span class="nav-text">node.js可以做什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Node环境"><span class="nav-number">3.</span> <span class="nav-text">安装Node环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hello-world"><span class="nav-number">4.</span> <span class="nav-text">hello world</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-中的-JavaScript"><span class="nav-number">1.</span> <span class="nav-text">Node 中的 JavaScript</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#核心模块"><span class="nav-number">1.1.</span> <span class="nav-text">核心模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关键字require"><span class="nav-number">1.2.</span> <span class="nav-text">关键字require</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#加载node内置的核心模块："><span class="nav-number">1.2.0.1.</span> <span class="nav-text">加载node内置的核心模块：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#加载自定义模块"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">加载自定义模块</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块通信"><span class="nav-number">1.3.</span> <span class="nav-text">模块通信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关键字exports"><span class="nav-number">1.4.</span> <span class="nav-text">关键字exports</span></a></li></ol></div>
             
 
           </div>
